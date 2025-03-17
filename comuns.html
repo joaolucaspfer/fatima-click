@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orações Comuns - Fátima Click</title>
+    <link rel="icon" href="logobranco.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            line-height: 1.6;
+        }
+        nav {
+            background-color: #051422;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo img {
+            max-height: 40px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header {
+            padding: 50px;
+            background-color: #022952;
+            color: white;
+        }
+        header img {
+            max-width: 150px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+            text-align: left;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .prayer-category {
+            margin-top: 40px;
+        }
+        .prayer-category h2 {
+            color: #022952;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .prayer-card {
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+        .prayer-card h3 {
+            color: #022952;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #022952;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .button:hover {
+            background: #01497b;
+        }
+        footer {
+            padding: 15px 20px;
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            position: relative;
+            margin-top: 40px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="missas.html">Horários de Missa</a></li>
+            <li><a href="oracoes.html">Horários de Oração</a></li>
+            <li><a href="oracoes-diarias.html">Orações</a></li>
+            <li><a href="parceiros.html">Parceiros</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+        <div class="logo">
+            <a href="index.html"><img src="logobranco.png" alt="Logo Fátima Click"></a>
+        </div>
+    </nav>
+    
+    <header>
+        <img src="logobranco.png" alt="Logo Fátima Click">
+        <h1>Orações Comuns</h1>
+        <p>Aqui você encontra orações para seu momento de espiritualidade.</p>
+    </header>
+    
+    <main>
+        <!-- Categoria de Orações Comuns -->
+        <div class="prayer-category">
+            
+            <div class="prayer-card">
+                <h3>Pai Nosso</h3>
+                <p>"Pai Nosso que estais nos céus, santificado seja o Vosso nome..."</p>
+                <a href="#" class="button" onclick="openModal('pai-nosso')">Ver Oração Completa</a>
+            </div>
+
+            <div class="prayer-card">
+                <h3>Ave Maria</h3>
+                <p>"Ave Maria, cheia de graça, o Senhor é convosco..."</p>
+                <a href="#" class="button" onclick="openModal('ave-maria')">Ver Oração Completa</a>
+            </div>
+
+            <div class="prayer-card">
+                <h3>Credo</h3>
+                <p>"Creio em Deus, Pai todo-poderoso, Criador do Céu e da Terra..."</p>
+                <a href="#" class="button" onclick="openModal('credo')">Ver Oração Completa</a>
+            </div>
+
+            <div class="prayer-card">
+                <h3>Cordeiro de Deus</h3>
+                <p>"Cordeiro de Deus, que tirais o pecado do mundo..."</p>
+                <a href="#" class="button" onclick="openModal('cordeiro-deus')">Ver Oração Completa</a>
+            </div>
+
+            <div class="prayer-card">
+                <h3>Glória a Deus nas Aulturas</h3>
+                <p>"Glória a Deus nas alturas, e paz na terra aos homens por Ele amados..."</p>
+                <a href="#" class="button" onclick="openModal('gloria')">Ver Oração Completa</a>
+            </div>
+
+            <div class="prayer-card">
+                <h3>Glória ao Pai</h3>
+                <p>"Glória ao Pai e ao Filho..."</p>
+                <a href="#" class="button" onclick="openModal('gloria-ao-pai')">Ver Oração Completa</a>
+            </div>
+
+            <div class="prayer-card">
+                <h3>Salve Rainha</h3>
+                <p>"Salve, Rainha, mãe de misericórdia, vida, doçura..."</p>
+                <a href="#" class="button" onclick="openModal('salve-rainha')">Ver Oração Completa</a>
+            </div>
+
+            <div class="prayer-card">
+                <h3>Santo Anjo</h3>
+                <p>"Santo Anjo do Senhor, meu zeloso guardador..."</p>
+                <a href="#" class="button" onclick="openModal('santo-anjo')">Ver Oração Completa</a>
+            </div>
+
+            <div class="prayer-card">
+                <h3>Sinal da Cruz</h3>
+                <p>"Pelo sinal da Santa Cruz..."</p>
+                <a href="#" class="button" onclick="openModal('sinal-cruz')">Ver Oração Completa</a>
+            </div>
+
+            <div class="prayer-card">
+                <h3>Vinde Espírito Santo</h3>
+                <p>"Vinde Espírito Santo, enchei os corações dos vossos fiéis..."</p>
+                <a href="#" class="button" onclick="openModal('espirito-santo')">Ver Oração Completa</a>
+            </div>
+        </div>
+
+        <!-- Modal para cada oração -->
+        <div id="pai-nosso" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('pai-nosso')">&times;</span>
+                <h3>Pai Nosso</h3>
+                <p>"Pai Nosso que estais nos céus, santificado seja o Vosso nome; venha a nós o Vosso Reino; seja feita a Vossa vontade, assim na terra como no céu; o pão nosso de cada dia nos dai hoje; perdoai as nossas ofensas, assim como nós perdoamos a quem nos tem ofendido; não nos deixeis cair em tentação, mas livrai-nos do mal. Amém."</p>
+            </div>
+        </div>
+
+        <div id="ave-maria" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('ave-maria')">&times;</span>
+                <h3>Ave Maria</h3>
+                <p>"Ave Maria, cheia de graça, 
+                    o Senhor é convosco, 
+                    bendita sois vós entre as mulheres 
+                    e bendito é o fruto do vosso ventre, Jesus. 
+                    Santa Maria, Mãe de Deus, 
+                    rogai por nós pecadores, 
+                    agora e na hora da nossa morte. Ámen"</p>
+            </div>
+        </div>
+
+        <div id="credo" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('credo')">&times;</span>
+                <h3>Credo</h3>
+                <p>"Creio em Deus, Pai todo-poderoso, Criador do Céu e da Terra
+
+                    E em Jesus Cristo, seu único Filho, nosso Senhor
+                    que foi concebido pelo poder do Espírito Santo;
+                    nasceu da Virgem Maria; 
+                    padeceu sob Pôncio Pilatos, 
+                    foi crucificado, morto e sepultado; 
+                    desceu à mansão dos mortos; 
+                    ressuscitou ao terceiro dia; 
+                    subiu aos Céus; 
+                    está sentado à direita de Deus Pai todo-poderoso, 
+                    de onde há-de vir a julgar os vivos e os mortos.
+                    
+                    Creio no Espírito Santo; 
+                    na santa Igreja Católica; 
+                    na comunhão dos Santos; 
+                    na remissão dos pecados; 
+                    na ressurreição da carne; 
+                    e na vida eterna. Amen"</p>
+            </div>
+        </div>
+
+        <div id="cordeiro-deus" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('cordeiro-deus')">&times;</span>
+                <h3>Cordeiro de Deus</h3>
+                <p>"Cordeiro de Deus, que tirais o pecado do mundo, tende piedade de nós.
+                    Cordeiro de Deus, que tirais o pecado do mundo, tende piedade de nós.
+                    Cordeiro de Deus, que tirais o pecado do mundo, dai-nos a paz."</p>
+            </div>
+        </div>
+
+        <div id="gloria" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('gloria')">&times;</span>
+                <h3>Glória a Deus nas Aultura</h3>
+                <p>"Glória a Deus nas alturas,
+                    e paz na terra aos homens por Ele amados.
+                    Senhor Deus, Rei dos céus, Deus Pai todo-poderoso:
+                    nós Vos louvamos, nós Vos bendizemos,
+                    nós Vos adoramos, nós Vos glorificamos,
+                    nós Vos damos graças, por vossa imensa glória.
+                    Senhor Jesus Cristo, Filho Unigénito,
+                    Senhor Deus, Cordeiro de Deus, Filho de Deus Pai:
+                    Vós que tirais o pecado do mundo, tende piedade de nós;
+                    Vós que tirais o pecado do mundo, acolhei a nossa súplica;
+                    Vós que estais à direita do Pai, tende piedade de nós.
+                    Só Vós sois o Santo; só Vós, o Senhor;
+                    só Vós o Altíssimo, Jesus Cristo;
+                    com o Espírito Santo, na glória de Deus Pai. Amen."</p>
+            </div>
+        </div>
+
+        <div id="gloria-ao-pai" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('gloria-ao-pai')">&times;</span>
+                <h3>Glória ao Pai</h3>
+                <p>"Glória ao Pai e ao Filho 
+                    e ao Espírito Santo. 
+                    Como era, no princípio, 
+                    agora e sempre. 
+                    Ámen."</p>
+            </div>
+        </div>
+
+        <div id="salve-rainha" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('salve-rainha')">&times;</span>
+                <h3>Salve Rainha</h3>
+                <p>"Salve, Rainha, 
+                    mãe de misericórdia, 
+                    vida, doçura, esperança nossa, salve! 
+                    A Vós bradamos, 
+                    os degredados filhos de Eva. 
+                    A Vós suspiramos, gemendo e chorando 
+                    neste vale de lágrimas. 
+                    Eia, pois, advogada nossa, 
+                    esses Vossos olhos misericordiosos 
+                    a nós volvei. 
+                    E, depois deste desterro, 
+                    nos mostrai Jesus, bendito fruto 
+                    do Vosso ventre. 
+                    Ó clemente, ó piedosa, 
+                    ó doce Virgem Maria. 
+                    Rogai por nós, Santa Mãe de Deus, 
+                    para que sejamos dignos das promessas de Cristo."</p>
+            </div>
+        </div>
+
+        <div id="santo-anjo" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('santo-anjo')">&times;</span>
+                <h3>Santo Anjo</h3>
+                <p>"Santo Anjo do Senhor, 
+                    meu zeloso guardador, 
+                    pois que a ti me confiou a Piedade divina, 
+                    hoje e sempre 
+                    me governa, rege, guarda e ilumina. 
+                    Ámen"</p>
+            </div>
+        </div>
+
+        <div id="sinal-cruz" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('sinal-cruz')">&times;</span>
+                <h3>Sinal da Cruz</h3>
+                <p>"Pelo sinal da Santa Cruz,
+                    livrai-nos DEUS, nosso SENHOR,
+                    dos nossos inimigos!
+                    Em nome do Pai, do Filho e do Espírito Santo. Amém!"</p>
+            </div>
+        </div>
+
+        <div id="espirito-santo" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('espirito-santo')">&times;</span>
+                <h3>Vinde Espírito Santo</h3>
+                <p>"Vinde Espírito Santo, enchei os corações dos vossos fiéis e acendei neles o fogo do Vosso Amor. Enviai o Vosso Espírito e tudo será criado e renovareis a face da terra.</p>
+                <p>Oremos: Ó Deus que instruíste os corações dos vossos fiéis, com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas segundo o mesmo Espírito e gozemos da sua consolação.Por Cristo Senhor Nosso. Amém"</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fátima Click - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = "block";
+        }
+        
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
+</body>
+</html>
