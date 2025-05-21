@@ -1,6 +1,6 @@
 <?php
-// filepath: c:\Users\Admin\Desktop\Programação\Projetos Pessoais\Site Missas\comuns.php
-include 'db.php'; // Inclui a conexão com o banco de dados
+include 'db.php';
+session_start();
 
 // Consulta para buscar as orações da tabela oracoes_comuns
 $sql = "SELECT * FROM oracoes_comuns";
