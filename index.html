@@ -3,51 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site em Construção - Fátima Click</title>
+    <title>Fátima Click</title>
     <link rel="icon" href="logobranco.ico" type="image/x-icon">
     <style>
         body {
             background: linear-gradient(135deg, #022952 60%, #f8f9fa 100%);
             color: #022952;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             min-height: 100vh;
             margin: 0;
         }
         .container {
             background: #fff;
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 48px 36px 36px 36px;
+            border-radius: 18px;
+            box-shadow: 0 6px 32px rgba(2,41,82,0.10), 0 1.5px 6px rgba(2,41,82,0.08);
             text-align: center;
+            max-width: 420px;
+            width: 95%;
+            margin-top: 100px; /* aumente este valor para descer a div principal */
         }
         .container img {
-            width: 200px; /* aumente o tamanho da logo */
-            margin-bottom: 25px;
+            width: 140px;
+            margin-bottom: 28px;
             display: block;
             margin-left: auto;
             margin-right: auto;
+            filter: drop-shadow(0 2px 8px rgba(2,41,82,0.10));
         }
         h1 {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
+            font-size: 2.3rem;
+            margin-bottom: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
         p {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
+            font-size: 1.13rem;
+            margin-bottom: 12px;
+            color: #234;
         }
-        .footer {
-            margin-top: 40px;
-            color: #888;
+        footer {
+            background: linear-gradient(90deg, #022952 80%, #234 100%);
+            color: #fff;
+            padding: 10px 0 6px 0;
+            text-align: center;
+            width: 100vw;
             font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            box-shadow: 0 -2px 12px rgba(2,41,82,0.08);
         }
-        .icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            color: #022952;
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+        footer a:hover {
+            color: #00bcd4;
+        }
+        footer p {
+            margin: 6px 0;
+            color: #fff;
+        }
+        footer span {
+            color: #bbb;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 28px 8px 24px 8px;
+                border-radius: 10px;
+                max-width: 98vw;
+                margin-top: 60px; /* também desce um pouco em telas pequenas */
+            }
+            .container img {
+                width: 90px;
+                margin-bottom: 18px;
+            }
+            h1 {
+                font-size: 1.4rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            footer {
+                font-size: 0.90rem;
+                padding: 8px 0 4px 0;
+            }
         }
     </style>
 </head>
@@ -58,8 +105,22 @@
         <p>Estamos trabalhando para trazer novidades para você.</p>
         <p>Volte em breve para conferir!</p>
     </div>
-    <div class="footer">
-        &copy; 2025 Fátima Click. Todos os direitos reservados.
-    </div>
+    <footer>
+        <div style="max-width:900px;margin:0 auto;text-align:center;">
+            <p style="font-weight:bold;font-size:1.05rem;">&copy; 2025 Fátima Click. Todos os direitos reservados.</p>
+            <p>
+                <strong>Email:</strong>
+                <a href="mailto:joaolucaspfer@gmail.com">joaolucaspfer@gmail.com</a><br>
+                <strong>Instagram:</strong>
+                <a href="https://instagram.com/fatima__click" target="_blank">@fatima__click</a><br>
+                <strong>Telefone:</strong> +351 912 544 652
+            </p>
+            <p>
+                <span>
+                    Este site é um projeto voluntário, sem fins lucrativos, dedicado à evangelização e informação da comunidade católica.
+                </span>
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
