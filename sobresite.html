@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fátima Click</title>
+    <title>Sobre o Fátima Click</title>
     <link rel="icon" href="logobranco.ico" type="image/x-icon">
     <style>
         body {
@@ -16,6 +16,7 @@
             justify-content: flex-start;
             min-height: 100vh;
             margin: 0;
+            padding-bottom: 0;
         }
         .container {
             background: #fff;
@@ -23,12 +24,13 @@
             border-radius: 18px;
             box-shadow: 0 6px 32px rgba(2,41,82,0.10), 0 1.5px 6px rgba(2,41,82,0.08);
             text-align: center;
-            max-width: 420px;
-            width: 95%;
-            margin-top: 100px; /* aumente este valor para descer a div principal */
+            max-width: 480px;
+            width: 90%;
+            margin-top: 50px;
+            margin-bottom: 30px;
         }
         .container img {
-            width: 140px;
+            width: 120px;
             margin-bottom: 28px;
             display: block;
             margin-left: auto;
@@ -36,15 +38,30 @@
             filter: drop-shadow(0 2px 8px rgba(2,41,82,0.10));
         }
         h1 {
-            font-size: 2.3rem;
+            font-size: 2.1rem;
             margin-bottom: 18px;
             font-weight: 700;
             letter-spacing: 1px;
         }
+        h2 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #022952;
+        }
         p {
-            font-size: 1.13rem;
+            font-size: 1.05rem;
             margin-bottom: 12px;
             color: #234;
+            text-align: left;
+            line-height: 1.6;
+        }
+        .highlight {
+            background: rgba(2,41,82,0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #022952;
         }
         .btn {
             display: inline-block;
@@ -66,12 +83,12 @@
             color: #fff;
             padding: 10px 0 6px 0;
             text-align: center;
-            width: 100vw;
+            width: 100%;
             font-size: 0.95rem;
             letter-spacing: 0.5px;
-            position: fixed;
+            position: relative;
             left: 0;
-            bottom: 0;
+            margin-top: 30px;
             box-shadow: 0 -2px 12px rgba(2,41,82,0.08);
         }
         footer a {
@@ -89,22 +106,28 @@
         footer span {
             color: #bbb;
         }
+        footer div {
+            text-align: center;
+        }
         @media (max-width: 600px) {
             .container {
-                padding: 28px 8px 24px 8px;
+                padding: 28px 20px 24px 20px;
                 border-radius: 10px;
-                max-width: 98vw;
-                margin-top: 60px; /* também desce um pouco em telas pequenas */
+                max-width: 95vw;
+                margin-top: 30px;
             }
             .container img {
                 width: 90px;
                 margin-bottom: 18px;
             }
             h1 {
-                font-size: 1.4rem;
+                font-size: 1.7rem;
+            }
+            h2 {
+                font-size: 1.2rem;
             }
             p {
-                font-size: 1rem;
+                font-size: 0.95rem;
             }
             .btn {
                 padding: 10px 20px;
@@ -120,11 +143,30 @@
 <body>
     <div class="container">
         <img src="logo.png" alt="Logo Fátima Click">
-        <h1>Site em Construção</h1>
-        <p>Estamos trabalhando para trazer novidades para você.</p>
-        <p>Volte em breve para conferir!</p>
-        <a href="sobresite.html" class="btn">Saiba Mais Sobre o Projeto</a>
+        <h1>Sobre o Fátima Click</h1>
+        
+        <h2>O que é o Fátima Click?</h2>
+        <p>O Fátima Click é uma plataforma digital dedicada à evangelização e informação da comunidade católica em Fátima. Nosso objetivo é facilitar o acesso a informações sobre horários de missas, orações e eventos religiosos.</p>
+        
+        <div class="highlight">
+            <h2>Nossa Missão</h2>
+            <p>Conectar os fiéis com a Igreja e promover a vida espiritual através de uma plataforma simples, acessível e confiável.</p>
+        </div>
+        
+        <h2>O que oferecemos</h2>
+        <p><strong>📅 Horários de Missas:</strong> Encontre facilmente os horários de missas em Fátima próximas a você.</p>
+        <p><strong>🙏 Orações Diárias:</strong> Uma coleção de orações católicas tradicionais e contemporâneas.</p>
+        <p><strong>📍 Localização de Igrejas:</strong> Descubra igrejas e paróquias em Fátima.</p>
+        <p><strong>📢 Avisos Paroquiais:</strong> Mantenha-se informado sobre eventos e atividades na cidade.</p>
+        
+        <div class="highlight">
+            <h2>Projeto Voluntário</h2>
+            <p>Este é um projeto voluntário, sem fins lucrativos, criado com amor e dedicação para servir a comunidade católica. Acreditamos que a tecnologia pode ser uma ferramenta poderosa para fortalecer nossa fé e comunidade.</p>
+        </div>
+        
+        <a href="index.html" class="btn">Voltar</a>
     </div>
+    
     <footer>
         <div style="max-width:900px;margin:0 auto;text-align:center;">
             <p style="font-weight:bold;font-size:1.05rem;">&copy; 2025 Fátima Click. Todos os direitos reservados.</p>
